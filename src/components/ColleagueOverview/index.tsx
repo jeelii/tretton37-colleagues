@@ -1,12 +1,18 @@
-import { employeesResponse } from '../../mocks/emplyees';
-import { ColleagueCard } from '../ColleagueCard';
+import { FunctionComponent } from 'react';
+import { ColleagueCard, Colleague } from '../ColleagueCard';
 import './colleagueOverview.css';
 
-export const ColleagueOverview = () => {
+type Props = {
+  colleagues: Colleague[];
+};
+
+export const ColleagueOverview: FunctionComponent<Props> = (props) => {
+  const { colleagues } = props;
+
   return (
     <section className="colleague__overview">
-      {employeesResponse.map((employee, index) => {
-        return <ColleagueCard {...employee} key={index} />;
+      {colleagues.map((colleague, index) => {
+        return <ColleagueCard {...colleague} key={index} />;
       })}
     </section>
   );
