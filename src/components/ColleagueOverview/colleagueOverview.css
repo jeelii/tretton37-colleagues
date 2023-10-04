@@ -1,0 +1,12 @@
+.colleague__overview {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 780px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
