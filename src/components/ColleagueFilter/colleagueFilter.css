@@ -1,0 +1,13 @@
+.colleague__filter__input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  box-shadow: 2px 2px 12px #5b7876;
+  border-radius: 8px;
+  font-size: large;
+
+  &:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 1px;
+  }
+}
