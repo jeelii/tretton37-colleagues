@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #dbdddb;
-  color: #292929;
+  background: var(--faded-green);
+  color: var(--text-black);
   font-family: 'Gabarito', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }

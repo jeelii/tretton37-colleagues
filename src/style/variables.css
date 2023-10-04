@@ -1,0 +1,9 @@
+html {
+  --faded-green: #dbdddb;
+  --shaded-green: #5b7876;
+  --grey: grey;
+  --white: white;
+  --text-black: #292929;
+  --shadow: 2px 2px 12px var(--shaded-green);
+  --focus-outline: 2px solid var(--text-black);
+}
