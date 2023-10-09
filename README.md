@@ -7,15 +7,15 @@ Create React App also comes with Eslint and Jest needed for QA.
 
 I have made the code easy to maintain and collaborate with by keeping components small in a consistent structure. This is beneficial when we need to fix problems or make changes later. I extracted helper functions that can be tested and reused by themselves, which helps keep the code in a good shape.
 
-I've made sure that the code is easy to understand by giving functions and components simple and meaningful names. This way, anyone who looks at the code can quickly figure out what it does.
+I have made sure that the code is easy to understand by giving functions and components simple and meaningful names. This way, anyone who looks at the code can quickly figure out what it does.
 
 I chose to add only the minimal dependencies:
 
-#### normalize.css
+#### `normalize.css`
 
 Makes browsers render elements consistently
 
-#### gh-pages
+#### `gh-pages`
 
 Enable deployment to [here](https://jeelii.github.io/tretton37-colleagues) through Github Pages
 
@@ -87,4 +87,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn deploy`
+
+Deploys the app to GitHub Pages
