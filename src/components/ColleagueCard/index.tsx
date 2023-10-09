@@ -23,7 +23,7 @@ export type Colleague = {
 };
 
 type Image = {
-  imageUrl: string | null | undefined;
+  imageUrl: string;
 };
 
 const ColleagueImage: FunctionComponent<Image> = (props) => {
@@ -44,7 +44,7 @@ export const ColleagueCard: FunctionComponent<Colleague> = (props) => {
   const imageUrl = imageWallOfLeetUrl ? imageWallOfLeetUrl : imagePortraitUrl;
   return (
     <article className="card">
-      <ColleagueImage imageUrl={imageUrl} />
+      <ColleagueImage imageUrl={imageUrl || ''} />
       <div>
         <h2>{name}</h2>
         {office && <h3>Office: {office}</h3>}
