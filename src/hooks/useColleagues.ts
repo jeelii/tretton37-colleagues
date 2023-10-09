@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { matchEverySearchTerm } from '../utils';
-import { Colleague } from '../components/ColleagueCard';
+import { Colleague, ColleagueRaw } from '../types';
 
 const apiUrl = `${process.env.REACT_APP_API_URL}`;
 const authorizationHeader = `${process.env.REACT_APP_API_HEADER}`;
@@ -9,6 +9,17 @@ const apiOptions = {
   headers: {
     Authorization: authorizationHeader,
   },
+};
+
+const transformColleagueData = (colleagues: ColleagueRaw[]): Colleague[] => {
+  return colleagues.map(
+    ({ name, office, imagePortraitUrl, imageWallOfLeetUrl }) => {
+      const imageUrl = imageWallOfLeetUrl
+        ? imageWallOfLeetUrl
+        : imagePortraitUrl || '';
+      return { name, office, imageUrl: imageUrl };
+    }
+  );
 };
 
 const useColleagues = () => {
@@ -26,7 +37,10 @@ const useColleagues = () => {
         }
 
         const jsonData = await response.json();
-        setColleaguesData(jsonData);
+
+        const transformedColleagues = transformColleagueData(jsonData);
+
+        setColleaguesData(transformedColleagues);
       } catch (error) {
         console.error('Error fetching data:', error);
       }

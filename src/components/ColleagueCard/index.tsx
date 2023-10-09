@@ -1,30 +1,8 @@
 import { FunctionComponent } from 'react';
 import './colleagueCard.css';
+import { Colleague } from '../../types';
 
-export type Colleague = {
-  name: string;
-  email: string;
-  phoneNumber: string | null;
-  office: string | null;
-  manager: string | null;
-  orgUnit: string | null;
-  mainText: string | null;
-  gitHub: string | null;
-  twitter: string | null;
-  stackOverflow: string | null;
-  linkedIn: string | null;
-  imagePortraitUrl: string | null;
-  imageWallOfLeetUrl: string | null | undefined;
-  highlighted: boolean;
-  published: boolean;
-  primaryRole: string | null;
-  secondaryRole: string | null;
-  area: string | null;
-};
-
-type Image = {
-  imageUrl: string;
-};
+type Image = Pick<Colleague, 'imageUrl'>;
 
 const ColleagueImage: FunctionComponent<Image> = (props) => {
   const { imageUrl } = props;
@@ -40,11 +18,10 @@ const ColleagueImage: FunctionComponent<Image> = (props) => {
 };
 
 export const ColleagueCard: FunctionComponent<Colleague> = (props) => {
-  const { name, office, imagePortraitUrl, imageWallOfLeetUrl } = props;
-  const imageUrl = imageWallOfLeetUrl ? imageWallOfLeetUrl : imagePortraitUrl;
+  const { name, office, imageUrl } = props;
   return (
     <article className="card">
-      <ColleagueImage imageUrl={imageUrl || ''} />
+      <ColleagueImage imageUrl={imageUrl} />
       <div>
         <h2>{name}</h2>
         {office && <h3>Office: {office}</h3>}
