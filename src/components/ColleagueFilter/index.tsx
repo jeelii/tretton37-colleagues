@@ -29,7 +29,7 @@ export const ColleagueFilter: FunctionComponent<Props> = (props) => {
         value={searchTerm}
         onChange={(event) => handleChange(event)}
         aria-label={ariaLabel}
-      ></input>
+      />
     </form>
   );
 };
