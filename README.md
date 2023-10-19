@@ -31,6 +31,7 @@ I chose the mobile first approach to have a consistent system for the responsive
 
 - Uses semantic HTML
 - Labeled input field
+- Uses ARIA roles
 
 #### Use modern CSS throughout the application
 
@@ -52,7 +53,8 @@ Search functionality:
 
 #### Available on a free public url
 
-Of course I wanted to publish the site. Here it is 👉 https://jeelii.github.io/tretton37-colleagues
+I no longer have access to the api. Ask me for a mocked demo version if you want to see the result.
+~~Of course I wanted to publish the site. Here it is 👉 https://jeelii.github.io/tretton37-colleagues~~
 
 ### Testing/QA
 
