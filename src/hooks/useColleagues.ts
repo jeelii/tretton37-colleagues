@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { matchEverySearchTerm } from '../utils';
-import { Colleague, ColleagueRaw } from '../types';
+import { matchEverySearchTerm } from '../shared/utils';
+import { Colleague, ColleagueRaw } from '../shared/types';
 
 const apiUrl = `${process.env.REACT_APP_API_URL}`;
 const authorizationHeader = `${process.env.REACT_APP_API_HEADER}`;

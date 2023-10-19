@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { ColleagueCard } from '../ColleagueCard';
 import './colleagueOverview.css';
-import { Colleague } from '../../types';
+import { Colleague } from '../../shared/types';
 
 type Props = {
   colleagues: Colleague[];

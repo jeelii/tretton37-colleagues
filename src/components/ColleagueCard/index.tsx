@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import './colleagueCard.css';
-import { Colleague } from '../../types';
+import { Colleague } from '../../shared/types';
 
 type Image = Pick<Colleague, 'imageUrl'>;
 
