@@ -19,6 +19,10 @@ Makes browsers render elements consistently
 
 Enable deployment to [here](https://jeelii.github.io/tretton37-colleagues) through Github Pages
 
+## Screenshot
+
+![Screenshot](screenshots/laptop.png)
+
 ## Features
 
 ### Design/accessibility
